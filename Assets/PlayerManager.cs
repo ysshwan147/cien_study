@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     {
         // 게임이 시작할때
         // 최대 체력 값을 UI 체력 바에 반영
-        _uimanager.SetMaxHealth(_health-10);
+        _uimanager.SetMaxHealth(_health+10);
         // 현재 체력(최대 체력 값)을 UI 체력 바에 반영
         _uimanager.SetHealth(_health);
 
