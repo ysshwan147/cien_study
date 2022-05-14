@@ -11,6 +11,9 @@ public class PlayerManager : MonoBehaviour
     UI_Manager _uimanager;
 
     [SerializeField]
+    SceneChanger _changeScene;
+
+    [SerializeField]
     float _health = 100.0f;
     [SerializeField]
     float _stemina = 100.0f;
@@ -76,6 +79,7 @@ public class PlayerManager : MonoBehaviour
                 _isAlive = false;
                 Debug.Log("Game Over");
                 Destroy(gameObject);
+                _changeScene.ChangeSceneByName_test("MainMenuScene");
             }
 
             // 변화하는 체력 값을 UI 체력 바에 반영
